@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        textarea {
+            width: 98%;
+            height: 400px;
+            margin: 0 auto 40px;
+        }
+        .card {
+            width: 98%;
+            padding: 16px;
+            overflow: auto;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <textarea></textarea>
+    <div class="card"></div>
+    <script>
+        document.querySelector('textarea').oninput = function () {
+            document.querySelector('.card').textContent = this.value.replace(/\n/g, ' ');
+        }
+    </script>
+</body>
+
+</html>
