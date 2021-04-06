@@ -28,7 +28,7 @@
     <div class="card"></div>
     <script>
         document.querySelector('textarea').oninput = function () {
-            document.querySelector('.card').textContent = '"' + this.value.replace(/\n/g, '<br>') + '"';
+            document.querySelector('.card').textContent = '"' + this.value.replace(/\n\n/g, '<br>') + '"';
         }
     </script>
 </body>
